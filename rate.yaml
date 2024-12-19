@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: 'Monthly exchange rate'
+  description: 'This API is called "monthly-exchange", which can be used to query exchange rates of the currencies information. the API will return a JSON object containing the relevant information of the currencies.'
+  version: 1.0.0
+servers:
+  - url: https://apiservice.mol.gov.tw
+paths:
+  /OdService/rest/datastore/A17030000J-000049-Iq0:
+    get:
+      summary: Monthly exchange rate overview of major international currencies
+      description: Provides an overview of the exchange rates of the currencies of my country and its major trading partners against the U.S. dollar at the end of recent months.
+      operationId: monthly-exchange
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Indicates if the request was successful
+                  result:
+                    type: object
+                    description: The data retrieved from the datastore
