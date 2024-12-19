@@ -1,0 +1,22 @@
+openapi: 3.1.0
+info:
+  title: 'Gapier: 50 powerful free GPTs Actions API'
+  description: A free exclusive GPTs Actions API provided by gapier.com, which can be used to enhance the capabilities of GPTs. Highly recommended for ChatGPT users!
+  version: v1.0.0
+servers:
+  - url: https://a.gapier.com
+paths:
+  /api/v1/searchmovie:
+    get:
+      operationId: SearchMovie
+      description: Search for movie information from TMDB using keywords
+      deprecated: false
+      parameters:
+        - name: keywords
+          in: query
+          required: true
+          description: Search keywords to find movies on TMDB
+          schema:
+            type: string
+components:
+  schemas: {}
